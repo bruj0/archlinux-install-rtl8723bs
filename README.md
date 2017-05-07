@@ -1,5 +1,7 @@
 # viewbook-2110-archlinux
-## Archlinux install ISO for the Viewbook 2110 
+## Archlinux install ISO for the Viewbook 2110
+- Wireless driver for the RLT8723bs
+- EFI32
 ## Installation
 - Clear the USB key
 
@@ -9,12 +11,6 @@ $ dd if=/dev/zero of/dev/sdX
 
 $ gdisk /dev/sdX
 
-  Number  Start (sector)    End (sector)  Size       Code  Name
-  
-   1            2048         2099199   1024.0 MiB  8300  Linux filesystem
-   
-   2         2099200         3123199   500.0 MiB   EF00  EFI System
-      
 - Format the EFi partition to fat32
 
 $ mkfs.vfat -F 32 -n "EFI"  /dev/sdX2
@@ -52,3 +48,12 @@ Install CD,created with:
 
 `$ iso_label="ARCH_201704"`
 `$ xorriso -as mkisofs -iso-level 3 -full-iso9660-filenames -volid "${iso_label}" -eltorito-boot isolinux/isolinux.bin -eltorito-catalog isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table  -isohybrid-mbr SQUASHFS_DIR/isolinux/isohdpfx.bin  -output arch-custom.iso SQUASHFS_DIR/`
+
+## More info
+
+https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Booting_64-bit_kernel_on_32-bit_UEFI
+
+https://wiki.archlinux.org/index.php/Remastering_the_Install_ISO
+
+https://aur.archlinux.org/packages/8723bs-git/
+
