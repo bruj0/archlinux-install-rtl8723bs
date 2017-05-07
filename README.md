@@ -55,3 +55,5 @@ https://wiki.archlinux.org/index.php/Remastering_the_Install_ISO
 
 https://aur.archlinux.org/packages/8723bs-git/
 
+https://watchmysys.com/blog/2015/12/arch-linux-and-sdio-wifi-on-a-bay-trail-tablet/
+
