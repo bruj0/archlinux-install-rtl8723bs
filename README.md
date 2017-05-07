@@ -11,6 +11,7 @@ $ dd if=/dev/zero of/dev/sdX
 $ gdisk /dev/sdX
 
 - Format the EFi partition to fat32
+
 $ mkfs.vfat -F 32 -n "EFI"  /dev/sdX2
 
 - Mount and Copy the EFI files
