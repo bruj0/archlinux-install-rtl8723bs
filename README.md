@@ -5,20 +5,19 @@
 ## Installation
 - Clear the USB key
 
-$ dd if=/dev/zero of/dev/sdX
+ * $ dd if=/dev/zero of/dev/sdX
 - Choose "blank GPT" and create 2 partitions, 1 of 1GB and 2 of 500M type ef00
 
-$ gdisk /dev/sdX
+ * $ gdisk /dev/sdX
 
 - Format the EFi partition to fat32
-
-$ mkfs.vfat -F 32 -n "EFI"  /dev/sdX2
+* $ mkfs.vfat -F 32 -n "EFI"  /dev/sdX2
 
 - Mount and Copy the EFI files
 
-$ mount /dev/sdX2 /mnt/usb
-$ cp -a EFI /mnt/usb
-$ sync && umount /mnt/usb
+* $ mount /dev/sdX2 /mnt/usb
+* $ cp -a EFI /mnt/usb
+* $ sync && umount /mnt/usb
 
 - Copy the Install CD ISO
 
