@@ -2,7 +2,8 @@
 ## Archlinux install ISO for the Viewbook 2110
 - Wireless driver for the RLT8723bs
 - EFI32
-- Download ISO from https://github.com/bruj0/viewbook-2110-archlinux/releases/download/1/arch-custom.iso
+- Download ISO from https://github.com/bruj0/archlinux-install-rtl8723bs/releases/download/1/arch-custom.iso
+
 ## Installation
 - Clear the USB key
 
